@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <title></title>
+
+    <style>
+        .header2 {
+            color: blue;
+            margin-top: 50px;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Udemy - Build a Backend REST API with Python &amp; Django - Advanced</h1>
+
+
+<h2 class="header2">1 - Create a Dockerfile in the root of the project</h2>
+
+<!-- Header 2 -->
+
+<h2 class="header2">2 - Configure our docker image</h2>
+<h4 class="header3">a. Go to  <a href="https://hub.docker.com">Docker Hub</a> and search for pyhton</h4>
+
+<img src="./img/0001.png" alt="image">
+
+<h4 class="header3">b. You will be redirected to a page with different images for python projects (<a href="https://hub.docker.com/_/python?tab=tags">here</a>).</h4>
+
+<h4 class="header3">c. For this project, we create our docker based on the '3.7-alpine' tag (<a href="https://hub.docker.com/layers/python/library/python/3.7-alpine/images/sha256-6a03abac4c3b66d5a24bf60e85838efe86892fc945f5dc209e5ee2aafbfec0c4?context=explore">link</a>). So type that in our docker file:</h4>
+
+<img src="./img/0002.png" alt="image">
+
+<h4 class="header3">d. Configure the image to install the requirements: </h4>
+
+<img src="./img/0003.png" alt="image">
+
+<h4 class="header3">e. Copy our app folder in our local machine to the work directory on docker: </h4>
+
+<img src="./img/0004.png" alt="image">
+
+<h4 class="header3">f. Create a user that will run our application using docker: </h4>
+
+<img src="./img/0005.png" alt="image">
+
+<!-- Header 3 -->
+
+<h2 class="header2">3 - Setup requirements</h2>
+
+<h4 class="header3">a. Create "requirements.txt" in the root of our project.</h4>
+
+<h4 class="header3">b. Find the latest version of Django in <a href="https://pypi.org/">Python Packages Index</a>. Add it to our requirements file.</h4>
+
+<img src="./img/0006.png" alt="image">
+
+<h4 class="header3">c. Find the latest version of Django REST Framework in <a href="https://pypi.org/project/djangorestframework/">Python Packages Index</a>. Add it to our requirements file.</h4>
+
+<img src="./img/0007.png" alt="image">
+
+<h4 class="header3">d. Your requirements.txt should be like that:</h4>
+
+<img src="./img/0008.png" alt="image">
+
+<!-- Header 4 -->
+
+<h2 class="header2">4 - Build our docker image</h2>
+
+<h4 class="header3">a. Create an empty "app" folder in the root of our project.</h4>
+
+<h4 class="header3">b. Inside your project folder, run the following command to run our dockerfile:</h4>
+
+<code>docker build .</code>
+
+<!-- Header 5 -->
+
+<h2 class="header2">5 - Configure docker compose</h2>
+
+<h4 class="header3">a. Create a "docker-compose.yml" file in the root of our project.</h4>
+
+<img src="./img/0009.png" alt="image">
+
+<h4 class="header3">b. Run the following command to build our image using the compose configuration:</h4>
+
+<code>docker-compose build</code>
+
+<!-- Header 5 -->
+
+<h2 class="header2">6 - Create our project</h2>
+
+<h4 class="header3">a. Run the following code to create our project using compose.</h4>
+
+<code>docker-compose run app sh -c "django-admin.py startproject app ."</code>
+
+<p>This code will start a project in our WORKDIR that we defined in our Dockerfile.</p>
+
+<img src="./img/0010.png" alt="image">
+
+<h4 class="header3">b. Push our changes to git.</h4>
+
+<code>git add .</code>
+<code>git add .</code>
+
+</body>
+</html>
