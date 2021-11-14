@@ -121,11 +121,21 @@
 <p>Lint Tool</p>
 <p>Check the latest version in: </p>
 <a href="https://pypi.org/search/?q=flake8">PyPi- Flake8</a>
+<br/>
 
 <img src="./img/0011.png" alt="image">
 
 <p>Add to requirements.txt</p>
 
+<h4>Update docker:</h4>
+
+<code>docker-compose build</code>
+
+<h4>To run unit tests:</h4>
+
+<code>docker-compose run app sh -c "python manage.py test"</code>
+</br>
+<code>docker-compose run app sh -c "python manage.py test && flake8"</code>
 
 
 </body>

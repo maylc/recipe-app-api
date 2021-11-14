@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <title>Core Module</title>
+
+    <style>
+        .header2 {
+            color: blue;
+            margin-top: 50px;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Udemy - Build a Backend REST API with Python &amp; Django - Advanced</h1>
+
+<h2 class="header2">1 - Create core app</h2>
+
+<p>Go to the project's main folder (recipe-app-api) and run the following command:</p>
+
+<code>docker-compose run app sh -c "python manage.py startapp core"</code>
+
+<br/>
+
+<img src="./img/0012.png" alt="image">
+
+<!-- Step 2 -->
+
+<h2 class="header2">2 - Cleanup files</h2>
+
+<p>- Remove tests and views files.</p>
+<p>- Create tests folder.</p>
+<br>
+
+<img src="./img/0013.png" alt="image">
+
+<!-- Step 3 -->
+
+<h2 class="header2">3 - Update settings file</h2>
+
+<p>- Add core module to "INSTALLED_APPS" in settings.py: </p>
+<br>
+<img src="./img/0014.png" alt="image">
+<br>
+<p>- Create "test_models.py" file in the tests folder and add unit tests.</p>
+<br>
+
+<!-- Step 4 -->
+
+<h2 class="header2">4 - Create models.</h2>
+
+<p>- Update models.py file in core module.</p>
+<br>
+<img src="./img/0015.png" alt="image">
+<br>
+<p>- Add the following line to the end of our settings.py file:</p>
+<br>
+<img src="./img/0016.png" alt="image">
+<br>
+<br>
+<p>- Run migrations: (Need to run every time we make changes to our models)</p>
+<code>docker-compose run app sh -c "python manage.py makemigrations core"</code>
+<br>
+<br>
+<img src="./img/0017.png" alt="image">
+<br>
+
+</body>
+</html>
