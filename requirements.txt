@@ -1,5 +1,8 @@
 Django==3.2.8
 djangorestframework==3.12.4
+
+# https://pypi.org/search/?q=psycopg2
+psycopg2==2.9.2
 flake8==4.0.1
 
 
